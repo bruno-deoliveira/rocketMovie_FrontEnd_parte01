@@ -1,16 +1,34 @@
-import { Container } from "./style";
+import { Container, Links } from "./style";
 
+import { Header } from "../../components/Header"
 import { Button } from "../../components/Button";
+import { Section } from "../../components/Section";
+import { Tag } from "../../components/Tag";
+import { ButtonText} from "../../components/ButtonText";
 
 export function Details() {
   
   return (
     <Container>
-      <h1> Hello Word </h1>
-      <span> Bruno Oliveira </span>
+      <Header />
+      <ButtonText title="Excluir nota" />
 
-      <Button title="Entrar" />
-      <Button title="Cadastrar" />
+      <Section title="Links úteis">
+        <Links>
+          <li>
+            <a href="#">https://github.com/bruno-deoliveira</a>
+          </li>
+          <li>
+            <a href="#">https://www.rocketseat.com.br</a>
+          </li>
+        </Links>
+      </Section>
+
+      <Section title="Marcadores">
+        <Tag title="express" />
+        <Tag title="nodejs" />
+      </Section>
+
       <Button title="Voltar" />
     </Container>
   );
