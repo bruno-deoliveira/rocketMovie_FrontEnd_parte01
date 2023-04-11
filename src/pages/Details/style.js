@@ -42,10 +42,6 @@ export const Content = styled.div`
     text-align: justify;
   }
 
-  .buttons {
-    display: flex;
-    gap: 10px;
-  }
   svg {
     color: ${({ theme }) => theme.COLORS.PINK};
     width: 20px;
@@ -83,9 +79,7 @@ export const AuthorInfo = styled.div`
     object-fit: cover;
   }
 
-  svg {
-    color: ${({ theme }) => theme.COLORS.PINK};
-  }
+
 `;
 
 

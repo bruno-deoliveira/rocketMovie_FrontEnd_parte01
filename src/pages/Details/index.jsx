@@ -21,8 +21,7 @@ export function Details() {
       <main>
         <Content>
           <div className="buttons">
-            <FiArrowLeft />
-            <ButtonText title="Voltar" />
+              <ButtonText title="Voltar" icon={FiArrowLeft} />
           </div>
 
           <TitleRating>
@@ -41,9 +40,7 @@ export function Details() {
 
             <div>
               <FiClock />
-              <span>
-                {format(new Date, "dd'/'MM'/'yy 'às' HH':'mm")}
-              </span>
+              <span>{format(new Date(), "dd'/'MM'/'yy 'às' HH':'mm")}</span>
             </div>
           </AuthorInfo>
 
@@ -95,7 +92,6 @@ export function Details() {
               </li>
             </Links>
           </Section>
-
         </Content>
       </main>
     </Container>
