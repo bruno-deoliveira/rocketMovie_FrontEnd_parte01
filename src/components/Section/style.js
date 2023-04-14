@@ -11,8 +11,8 @@ export const Container = styled.section`
     padding-bottom: 15px;
     margin-bottom: 24px;
 
-    color: ${({ theme }) => theme.COLORS.GRAY_100};
-    font-size: 20px;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    font-size: 32px;
     font-weight: 400;
   }
 `;

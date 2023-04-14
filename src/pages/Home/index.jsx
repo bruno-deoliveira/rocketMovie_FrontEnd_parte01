@@ -36,7 +36,7 @@ export function Home() {
             data={{
               title: "Interestellar",
               tags: [
-                { id: "1", namne: "drama" },
+                { id: "1", name: "drama" },
                 { id: "2", name: "Ficção Cientifica" },
                 { id: "3", name: "Familia" },
               ],

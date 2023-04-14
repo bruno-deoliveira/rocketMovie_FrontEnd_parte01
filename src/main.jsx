@@ -6,13 +6,13 @@ import GlobalStyles from "./styles/global";
 
 import theme from './styles/theme';
 
-import { Homee } from "./pages/Homee";
+import { Profile } from "./pages/Profile";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Homee />
+      <Profile />
     </ThemeProvider>
   </React.StrictMode>
 );
