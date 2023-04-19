@@ -1,11 +1,14 @@
 
-import { Container, Profile, Logout } from './style'
+import { Container, Search, Profile, Logout } from './style'
 
-export function Header () {
+export function Header ({children}) {
   return (
     <Container>
-
       <h2>RocketMovies</h2>
+
+      <Search>
+        {children}
+      </Search>
 
       <Profile>
         <div>
@@ -18,7 +21,6 @@ export function Header () {
           alt="Foto so usuário"
         />
       </Profile>
-
     </Container>
   );
 }

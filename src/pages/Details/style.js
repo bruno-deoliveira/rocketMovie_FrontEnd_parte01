@@ -7,30 +7,27 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 105px auto;
   grid-template-areas:
-  "header"
-  "content";
+    "header"
+    "content";
 
   > main {
     grid-area: content;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 64px;
   }
-`;
 
-export const Links = styled.ul`
-  list-style: none;
-
-  > li {
-    margin-top: 12px;
-
-    a {
-    color: ${({ theme}) => theme.COLORS.WHITE};
+  main::-webkit-scrollbar {
+    width: 8px;
   }
-}
+
+  main::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 8px;
+  }
 `;
 
 export const Content = styled.div`
-  max-width: 550px;
+  max-width: 1050px;
   margin: 0 auto;
 
   display: flex;
@@ -78,8 +75,18 @@ export const AuthorInfo = styled.div`
     border-radius: 50%;
     object-fit: cover;
   }
+`;
 
+export const Links = styled.ul`
+  list-style: none;
 
+  > li {
+    margin-top: 12px;
+
+    a {
+      color: ${({ theme }) => theme.COLORS.WHITE};
+    }
+  }
 `;
 
 

@@ -7,37 +7,51 @@ import { NoteItem } from "../../components/NoteItem"
 import { Section } from "../../components/Section"
 import { Button } from "../../components/Button";
 
-
+import { FiArrowLeft } from "react-icons/fi";
+import { Rating } from './../../components/Rating/index';
 
 
 export function New (){
   return (
     <Container>
-      <Header />
+      <Header>
+        <Input placeholder="Pesquisar pelo título"/>
+      </Header>
 
       <main>
         <Form>
           <header>
-            <h1> Criar Nota</h1>
-            <a href="/">voltar</a>
+            <a href="/">
+              <FiArrowLeft />
+              Voltar
+            </a>
+            <h1> Novo filme </h1>
           </header>
 
-          <Input placeholder="Titulo" />
+          <div>
+            <Input placeholder="Titulo" />
+
+            <Input
+              placeholder="Sua nota (de 0 a 5)"
+              type="number"
+              min="0"
+              max="5"
+            />
+          </div>
+
           <Textarea placeholder="Observações" />
 
-          <Section title=" Links Úteis">
-            <NoteItem value="https://github.com" />
-            <NoteItem isNew placeholder="Novo link" />
-          </Section>
-
           <Section title="Marcadores">
-            <div className='tags'>
+            <div className="tags">
               <NoteItem value="React" />
               <NoteItem isNew placeholder="Nova tag" />
             </div>
           </Section>
 
-          <Button title="Salvar"/>
+          <div>
+            <Button title="Excluir filme" />
+            <Button title="Salvar" />
+          </div>
         </Form>
       </main>
     </Container>

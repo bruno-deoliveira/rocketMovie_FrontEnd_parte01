@@ -11,18 +11,19 @@ import { Section } from "../../components/Section";
 import { Tag } from "../../components/Tag";
 import { ButtonText} from "../../components/ButtonText";
 import { Rating } from "../../components/Rating";
+import { Input } from "../../components/Input"
 
 export function Details() {
   
   return (
     <Container>
-      <Header />
+      <Header>
+        <Input placeholder="Pesquisar pelo título" />
+      </Header>
 
       <main>
         <Content>
-          <div className="buttons">
-              <ButtonText title="Voltar" icon={FiArrowLeft} />
-          </div>
+          <ButtonText title="Voltar" icon={FiArrowLeft} />
 
           <TitleRating>
             <h1> Interestellar </h1>

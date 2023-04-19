@@ -1,77 +1,63 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-display: grid;
-grid-template-columns: 250px auto;
-grid-template-rows: 115px 128px auto 64px;
-grid-template-areas: 
-"brand header"
-"menu search"
-"menu content"
-"newnote content";
+  display: grid;
+  grid-template-rows: 105px auto;
+  grid-template-areas:
+    "header"
+    "content";
 
-background-color: ${({ theme}) => theme.COLORS.BACKGROUND_800};
-`;
+  > main {
+    grid-area: content;
 
-export const Brand = styled.div`
-  grid-area: brand;
+    width: 100%;
+    max-width: 1050px;
+    margin: 48px auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    
 
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-  border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+      margin-bottom: 38px;
 
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-
-  > h1 {
-    font-size: 24px;
-    color: ${({ theme }) => theme.COLORS.PINK};
+      h1 {
+        font-weight: 400;
+      }
+    }
   }
-`;
-
-export const Menu = styled.div`
-  grid-area: menu;
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-
-  padding-top: 64px;
-  text-align: center ;
-
-  > li {
-    margin-bottom: 24px;
-    list-style: none;
-  }
-`;
-
-export const Search = styled.div`
-  grid-area: search;
-  padding: 64px 64px 0;
-
 `;
 
 export const Content = styled.div`
-  grid-area: content;
-  padding: 0 64px;
+  max-height: calc(100vh - 297px);
   overflow-y: auto;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 8px;
+  }
 `;
 
-export const NewNote = styled.button`
-  grid-area: newnote;
 
+export const NewMovie = styled.button`
   background-color: ${({ theme }) => theme.COLORS.PINK};
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
   border: none;
 
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
+  gap: 8px;
 
-  svg {
-    margin-right: 8px;
-  }
+  padding: 13.5px 32px;
+  border-radius: 8px;
 `;
+

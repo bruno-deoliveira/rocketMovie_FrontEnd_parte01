@@ -14,13 +14,21 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 123px;,
+  padding: 0 123px;
 
   >h2 {
     font-size:24px;
     color: ${({ theme })=> theme.COLORS.PINK};
   }
 `; 
+
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+  flex-grow: 1;
+`;
+
 
 export const Profile = styled.div`
   display: flex;

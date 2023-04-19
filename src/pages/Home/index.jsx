@@ -1,40 +1,34 @@
-import { Container, Brand, Menu, Search, Content, NewNote } from "./style";
+import { Container, NewMovie, Content } from "./style";
 
-import { FiPlus, FiSearch } from "react-icons/fi";
+import { FiPlus } from  "react-icons/fi";
 
 import { Header } from "../../components/Header";
-import { ButtonText } from "./../../components/ButtonText";
-import { Input } from "../../components/Input";
-import { Notes } from "../../components/Notes";
-import { Section } from "../../components/Section";
+import { Notes } from "../../components/Notes" 
+import { Input } from "../../components/Input"
 
-export function Home() {
+export function Home (){
   return (
     <Container>
-      <Brand></Brand>
+      <Header>
+        <Input placeholder="Pesquisar pelo título"/>
+      </Header>
 
-      <Header />
-      <Menu>
-        <li>
-          <ButtonText title="Todos" isActive />
-        </li>
-        <li>
-          <ButtonText title="Filmes" />
-        </li>
-        <li>
-          <ButtonText title="Tags" />
-        </li>
-      </Menu>
+      <main>
+        <header>
+          <h1> Meus filmes</h1>
 
-      <Search>
-        <Input placeholder="Como pesquisar pelo titulo" icon={FiSearch} />
-      </Search>
+          <NewMovie>
+            <FiPlus />
+            Adicionar Filme
+          </NewMovie>
+        </header>
 
-      <Content>
-        <Section title="Meus filmes">
+        <Content>
           <Notes
             data={{
               title: "Interestellar",
+              description:
+                "Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se...",
               tags: [
                 { id: "1", name: "drama" },
                 { id: "2", name: "Ficção Cientifica" },
@@ -42,12 +36,21 @@ export function Home() {
               ],
             }}
           />
-        </Section>
-      </Content>
-      <NewNote>
-        <FiPlus />
-        Criar Nota
-      </NewNote>
+
+          <Notes
+            data={{
+              title: "Interestellar",
+              description:
+                "Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com sua família. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se...",
+              tags: [
+                { id: "1", name: "drama" },
+                { id: "2", name: "Ficção Cientifica" },
+                { id: "3", name: "Familia" },
+              ],
+            }}
+          />
+        </Content>
+      </main>
     </Container>
   );
-}
+};
