@@ -1,5 +1,7 @@
 import {Container, Form} from './style';
 
+import { Link } from "react-router-dom";
+
 import {Header} from '../../components/Header';
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
@@ -15,16 +17,16 @@ export function New (){
   return (
     <Container>
       <Header>
-        <Input placeholder="Pesquisar pelo título"/>
+        <Input placeholder="Pesquisar pelo título" />
       </Header>
 
       <main>
         <Form>
           <header>
-            <a href="/">
+            <Link to="/">
               <FiArrowLeft />
               Voltar
-            </a>
+            </Link>
             <h1> Novo filme </h1>
           </header>
 

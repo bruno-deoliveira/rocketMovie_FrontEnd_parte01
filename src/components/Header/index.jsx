@@ -1,4 +1,3 @@
-
 import { Container, Search, Profile, Logout } from './style'
 
 export function Header ({children}) {
@@ -10,7 +9,7 @@ export function Header ({children}) {
         {children}
       </Search>
 
-      <Profile>
+      <Profile to="/profile">
         <div>
           <strong>Bruno Oliveira</strong>
           <Logout> Sair </Logout>
